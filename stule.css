@@ -66,14 +66,29 @@ h1{
   background-color: black;
   border-radius: 50px;
   color: #FFFFE0;
-  height: 600px;
 }
 .banner-msg{
-  width: 531px;
+  width: 90%;
   margin: 100px;
+  padding: 5px;
+}
+.banner-msg button{
+  color: wheat;
+  background-color: indianred;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.banner-msg button:hover {
+  color: #000;
+  background-color: wheat;
+  border: 2px solid gray;
 }
 .banner-img img{
-  width: 480px;
+  width: 500px;
   height: 620px;
   margin-left: 50px;
 }
@@ -197,3 +212,78 @@ h1{
   width: 185px;
 }
 
+/*-------------------------------
+        @media Design
+ ----------------------------------*/
+ @media only screen and (min-width: 576px) and (max-width: 992px){
+  .container{
+    margin: 50px;
+    justify-content: center;
+  }
+  h1{
+    font-size: 2.75em;
+    justify-content: center;
+  }
+  .banner-msg{
+    width: 90%;
+    margin: 0;
+    margin-top: 60px;
+  }
+  .banner-img img{
+    width: 360px;
+    height: 550px;
+    margin-left: 50px;
+  }
+  .players, .matchs{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .player, .teams{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 576px){
+  .container{
+    margin: 25px;
+    justify-content: center;
+  }
+  h1{
+    font-size: 2.5em;
+    justify-content: center;
+  }
+  .header-btn{
+    display: none;
+  }
+  .banner{
+    flex-direction: column-reverse;
+  }
+  .banner-msg{
+    width: 90%;
+    margin: 20px 10px;
+  }
+  .banner-img img{
+    width: 360px;
+    height: 550px;
+    margin-left: 10px;
+  }
+  .players, .matchs{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+  }
+  .player, .teams{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .feature{
+    flex-direction: column;
+  }
+  .blog-bar{
+    margin-bottom: 30px;
+  }
+}
